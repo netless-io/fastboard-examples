@@ -4,14 +4,14 @@ import { createFastboard, FastboardApp, mount } from "@netless/fastboard";
 
 const container = ref<HTMLDivElement>();
 
-// app not plain object, don't put it in ref().
+// app not plain object, don't put it in ref()
 const appRef = shallowRef<FastboardApp | null>(null);
 
 onMounted(async () => {
     let app = await createFastboard({
         // [1]
         sdkConfig: {
-            appIdentifier: "",
+            appIdentifier: "whiteboard-appid",
             region: "cn-hz", // "cn-hz" | "us-sv" | "sg" | "in-mum" | "gb-lon"
         },
         // [2]
