@@ -9,7 +9,7 @@ function App() {
     useEffect(() => {
         // hold the app instance in the closure.
         // you can not rely on the outer "app" because this callback is only called once.
-        let app_instance: FastboardApp;
+        let appInstance: FastboardApp;
     
         createFastboard({
           sdkConfig: {
@@ -23,12 +23,12 @@ function App() {
           },
         }).then(app => {
           // save the app instance to outer "app", also hold it by itself
-          setApp((app_instance = app));
+          setApp((appInstance = app));
         });
     
         // terminate the app on component unmount
         return () => {
-          if (app_instance) app_instance.destroy();
+          if (appInstance) appInstance.destroy();
         };
     
         // must be called only once
