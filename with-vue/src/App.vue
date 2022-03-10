@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, markRaw, onUnmounted, shallowRef } from "vue";
+import { ref, onMounted, onUnmounted, shallowRef } from "vue";
 import { createFastboard, FastboardApp, mount } from "@netless/fastboard";
 
 const container = ref<HTMLDivElement>();
