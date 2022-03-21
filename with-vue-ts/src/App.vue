@@ -18,9 +18,8 @@ onMounted(async () => {
         joinRoom: {
             uid: "unique_id_for_each_client",
             uuid: "room-uuid",
-            roomToken:
-                "NETLESSROOM_...",
-            },
+            roomToken: "NETLESSROOM_...",
+        },
         // [3]
         managerConfig: {
             cursor: true,
