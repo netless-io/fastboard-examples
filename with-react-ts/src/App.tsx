@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
-import { createFastboard, FastboardApp } from "@netless/fastboard-core";
-import { Fastboard } from "@netless/fastboard-react";
+import { createFastboard, FastboardApp, Fastboard } from "@netless/fastboard-react";
 import "./App.css";
 
 function App() {
@@ -12,23 +11,23 @@ function App() {
         let appInstance: FastboardApp;
     
         createFastboard({
-          sdkConfig: {
-            appIdentifier: "whiteboard-appid",
-            region: "cn-hz", // "cn-hz" | "us-sv" | "sg" | "in-mum" | "gb-lon"
-          },
-          joinRoom: {
-            uid: "unique_id_for_each_client",
-            uuid: "room-uuid",
-            roomToken: "NETLESSROOM_...",
-          },
+            sdkConfig: {
+                appIdentifier: "whiteboard-appid",
+                region: "cn-hz", // "cn-hz" | "us-sv" | "sg" | "in-mum" | "gb-lon"
+            },
+            joinRoom: {
+                uid: "unique_id_for_each_client",
+                uuid: "room-uuid",
+                roomToken: "NETLESSROOM_...",
+            },
         }).then(app => {
-          // save the app instance to outer "app", also hold it by itself
-          setApp((appInstance = app));
+            // save the app instance to outer "app", also hold it by itself
+            setApp((appInstance = app));
         });
     
         // terminate the app on component unmount
         return () => {
-          if (appInstance) appInstance.destroy();
+            if (appInstance) appInstance.destroy();
         };
     
         // must be called only once
