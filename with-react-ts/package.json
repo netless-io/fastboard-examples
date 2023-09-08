@@ -8,17 +8,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@netless/fastboard-react": "^0.3.0",
-    "@netless/window-manager": "^0.4.13",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "white-web-sdk": "^2.16.10"
+    "@netless/fastboard-react": "^0.3.8",
+    "@netless/window-manager": "^0.4.61",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "white-web-sdk": "^2.16.44"
   },
   "devDependencies": {
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "@vitejs/plugin-react": "^1.0.7",
-    "typescript": "^4.5.4",
-    "vite": "^2.8.0"
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
   }
 }
